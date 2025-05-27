@@ -152,7 +152,7 @@
   margin-top: auto;
   display: flex;
   align-items: center;
-  color: #b0b7c3;
+  color: #7a8aa0;
   cursor: pointer;
   font-size: 1.08rem;
   font-weight: 500;
@@ -166,4 +166,22 @@
 .settingItem:hover {
   background: #e8f0fe;
   color: #222b45;
+}
+
+.sidebarClose {
+  display: block;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1200;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+@media (min-width: 769px) {
+  .sidebarClose {
+    display: none;
+  }
 }

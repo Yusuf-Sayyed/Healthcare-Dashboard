@@ -28,17 +28,26 @@ const Sidebar = () => {
 
   return (
     <>
-      {isMobile && (
+      {isMobile && !sidebarOpen && (
         <button
           className={styles.sidebarToggle}
-          onClick={() => setSidebarOpen(!sidebarOpen)}
-          aria-label="Toggle menu"
+          onClick={() => setSidebarOpen(true)}
+          aria-label="Open menu"
         >
-          {sidebarOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+          <FiMenu size={24} />
         </button>
       )}
 
       <aside className={`${styles.sidebar} ${sidebarOpen ? styles.open : ''}`}>
+        {isMobile && sidebarOpen && (
+          <button
+            className={styles.sidebarClose}
+            onClick={() => setSidebarOpen(false)}
+            aria-label="Close menu"
+          >
+            <FiX size={28} />
+          </button>
+        )}
         <div className={styles.sidebarContent}>
           <div className={styles.logo}>
             Health<span>care.</span>

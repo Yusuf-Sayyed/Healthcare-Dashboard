@@ -73,3 +73,11 @@
     font-size: 1.5rem;
   }
 }
+
+@media (max-width: 425px) {
+  .activityContainer {
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
+  }
+}
