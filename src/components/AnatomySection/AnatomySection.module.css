@@ -1,0 +1,122 @@
+.anatomyContainer {
+    background: #F0F8FF; /* White background like the card */
+    border-radius: 16px; /* Rounded corners */
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* Subtle shadow */
+    position: relative; /* Needed for absolute positioning of floating labels later */
+    overflow: hidden; /* Hide parts of the image if it overflows slightly */
+    max-width: 500px;
+    height: 100%; /* Set height to 100% */
+    margin-left: 10px;
+    margin: 0;
+    display: inline-block;
+}
+
+.anatomyImage {
+    display: block;
+    margin: 6px;
+    max-width: 100%; /* Ensure image is responsive */
+    height: 100%; /* Set height to 100% */
+    object-fit: contain; /* Add object-fit to maintain aspect ratio */
+    flex-shrink: 0;
+    width: 100%;
+    height: auto;
+}
+
+.scanHeartIcon {
+    position: absolute;
+    top: 27%;   /* Adjust these values */
+    left: 62%;  /* until it's centered on the chest */
+    transform: translate(-80%, -80%);
+}
+
+.scanLegIcon {
+    position: relative;
+    bottom: 35%;
+    left: 36%;
+}
+
+.heartLabel {
+    position: absolute;
+    top: 20%; /* Adjust as needed */
+    left: 66%;
+    background-color: #1f349c;
+    color: white;
+    padding: 4px 6px;
+    border-radius: 8px;
+    font-size: 0.6rem;
+    font-weight: 500;
+}
+
+.legLabel {
+    position: absolute;
+    bottom: 46%; /* Near the legs */
+    left: 2%;
+    background-color: #00FFFF;
+    color: #1f349c;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 0.6rem;
+    border: 1px solid #3cdada;
+  }
+
+@media (max-width: 425px) {
+  .scanLegIcon {
+    position: absolute;
+    left: 39%;
+    bottom: 32%;
+    z-index: 2;
+  }
+  .legLabel {
+    position: absolute;
+    left: 10%;
+    bottom: 34%;
+    font-size: 0.7rem;
+    padding: 4px 8px;
+    z-index: 3;
+  }
+
+  .heartLabel {
+    top: 22%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .anatomyContainer {
+    max-width: 350px;
+    padding: 1rem;
+  }
+  .anatomyImage {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+
+@media (min-width: 2560px) {
+    .scanLegIcon {
+        position: absolute;
+        left: 40%;
+        bottom: 44%;
+        z-index: 2;
+    }
+    .legLabel {
+        position: absolute;
+        left: 12%;
+        bottom: 45%;
+        font-size: 1.2rem;
+        padding: 4px 8px;
+        z-index: 3;
+      }
+
+    .scanHeartIcon {
+        top: 23%;
+        right: 28%;
+    }
+    .heartLabel {
+        top: 20%;
+        font-size: 1.2rem;
+        padding: 4px 8px;
+      }
+}

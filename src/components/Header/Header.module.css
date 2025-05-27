@@ -1,0 +1,101 @@
+.header {
+  display: flex;
+  justify-content: space-between; /* Pushes search to left, user info/buttons to right */
+  align-items: center; /* Vertically aligns content */
+  padding: 1.5rem 1rem 1.5rem 0.2rem;
+}
+
+.searchContainer {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccd2db;
+  box-shadow: ccd2db;
+  /* Light background for search area */
+  border-radius: 8px;
+  padding: 0.6rem 1rem;
+  flex-grow: 0.5; /* Allow search to take some space, but not fill */
+  max-width: 400px; /* Limit search bar width */
+}
+
+.searchIcon {
+  color: #7a8aa0; /* Gray color for icon */
+  margin-right: 0.5rem;
+}
+
+.searchInput {
+    border: none;
+    background: none;
+    outline: none;
+    font-size: 1rem;
+    color: #222b45;
+    width: 100%; /* Take remaining space */
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+}
+
+.notificationIcon {
+  cursor: pointer;
+
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 20%;
+    background-color: #00FFFF; /* Blue background */
+    color: #050505; /* White icon */
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin-right: 1rem; /* Space between user info and add button */
+}
+
+.avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%; /* Circular avatar */
+  margin-right: 0.8rem;
+  object-fit: cover; /* Ensure image covers the area */
+}
+
+.addButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 20%;
+  background-color: #1f349c; /* Blue background */
+  color: #fff; /* White icon */
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+/* Add dark mode styles here later, similar to the sidebar */
+/* Example:
+.darkMode .header { ... }
+*/
+
+@media (max-width: 768px) {
+  .header {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+  .userInfo {
+    margin-left: 10px;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: auto;
+  }
+
+  .searchContainer  {
+    margin-left: 60px;
+  }
+}

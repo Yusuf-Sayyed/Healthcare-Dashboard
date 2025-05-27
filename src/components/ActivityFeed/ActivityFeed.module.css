@@ -1,0 +1,75 @@
+.activityContainer {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 520px;
+  margin-top: 0.5rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sectionTitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #222b45;
+}
+
+.appointmentCount {
+  font-size: 0.9rem;
+  color: #7a8aa0;
+}
+
+.chartContainer {
+  height: 120px; /* Fixed height for the chart area */
+  display: flex;
+}
+
+.barsContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  gap: 12px;
+}
+
+.dayColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.barGroup {
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  height: 100%;
+}
+
+.bar {
+  width: 6px;
+  min-height: 1px; /* Ensures bars are always visible */
+  background-color: #3366ff;
+  border-radius: 3px;
+  transition: height 0.3s ease;
+}
+
+.dayLabel {
+  font-size: 0.75rem;
+  color: #7a8aa0;
+  text-align: center;
+}
+
+@media (min-width: 2560px) {
+  .activityContainer {
+    max-width: 900px;
+    padding: 3rem;
+    font-size: 1.5rem;
+  }
+}

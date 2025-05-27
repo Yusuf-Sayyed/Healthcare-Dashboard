@@ -1,0 +1,119 @@
+.calendarContainer {
+    background: #F0F8FF; /* White background */
+    padding: 1.5rem; /* Padding inside the container */
+    width: 100%; /* Take full width of parent (right column) */
+    box-sizing: border-box; /* Include padding in width */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.monthYear {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #222b45;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.navIcon {
+    color: #a6acbe;
+    cursor: pointer;
+}
+
+.dayHeaders {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7 columns for days */
+    text-align: center;
+    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+    color: #7a8aa0;
+    font-weight: 500;
+}
+
+.calendarGrid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7 columns for days */
+    gap: 0.5rem 0; /* Row gap, no column gap */
+    text-align: center;
+}
+
+.dayCell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Optional: border or background for cells */
+}
+
+.date {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #222b45;
+    margin-bottom: 0.5rem;
+}
+
+.timeSlots {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem; /* Space between time slots */
+    font-size: 0.8rem;
+}
+
+.timeSlot {
+    padding: 0.3rem 0.5rem; /* Padding around time text */
+    border-radius: 4px; /* Rounded corners for time slots */
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+    color: #7a8aa0; /* Default color for time slots */
+}
+
+.timeSlot:hover {
+    background-color: #e8f0fe; /* Hover effect */
+    color: #222b45;
+}
+
+.selectedDay .date {
+    color: #030b32; /* Highlight color for selected date */
+}
+
+.selectedTimeSlot {
+    background-color: #1f349c; /* Background for selected time slot */
+    color: #fff; /* White text for selected time slot */
+}
+
+.disabledTimeSlot {
+    background-color: #b7b8ec;
+}
+
+@media (max-width: 1024px) {
+  .calendarContainer {
+    padding: 1rem;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1025px) {
+  .calendarBelow {
+    display: none !important;
+  }
+}
+
+@media (min-width: 2560px) {
+  .calendarContainer {
+    max-width: 1600px;
+    padding: 3rem;
+    font-size: 1.5rem;
+    margin-left: 0;
+    margin-right: auto;
+  }
+}
+

@@ -1,0 +1,119 @@
+.upcomingScheduleContainer {
+    background: #F0F8FF;
+    padding: 0.5rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.upcomingScheduleTitle {
+    margin-left: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #222b45;
+    margin-bottom: 0.2rem;
+}
+
+.sectionTitle {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #222b45;
+    margin-bottom: 1.5rem;
+}
+
+.dayGroup {
+    margin-top: 1rem;
+}
+
+.dayTitle {
+    font-weight: 600;
+    color: #555;
+    font-size: 0.8rem;
+}
+
+.dayContainer {
+    margin-left: 0.5rem;
+    display: grid;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.appointmentsRow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 3px;
+}
+
+.appointmentItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #eef3ff;
+    padding: 10px 14px;
+    border-radius: 12px;
+    width: fit-content;
+    max-width: 120px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  }
+
+.icon {
+    flex-shrink: 0;
+  }
+
+.details {
+    display: flex;
+    flex-direction: column;
+}
+
+.description {
+    font-size: small;
+    font-weight: 400;
+    color: #222b45;
+}
+
+.time {
+    font-size: 10px;
+    color: #555;
+    font-size: 0.85rem;
+}
+
+.scheduleTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.appointmentCell {
+    width: 50%;
+    padding: 0.8rem;
+    border: 1px solid #e0e6ed;
+    vertical-align: top;
+}
+
+.appointmentContent {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.appointmentType {
+    font-weight: 600;
+    color: #222b45;
+    font-size: 0.95rem;
+}
+
+.appointmentTime {
+    color: #7a8aa0;
+    font-size: 0.85rem;
+}
+
+.doctorName {
+    color: #222b45;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.scheduleDay {
+    font-size: 1rem;
+    color: #7a8aa0;
+}
