@@ -26,7 +26,7 @@
 }
 
 .chartContainer {
-  height: 120px; /* Fixed height for the chart area */
+  height: 120px;
   display: flex;
 }
 
@@ -54,7 +54,7 @@
 
 .bar {
   width: 6px;
-  min-height: 1px; /* Ensures bars are always visible */
+  min-height: 1px;
   background-color: #3366ff;
   border-radius: 3px;
   transition: height 0.3s ease;

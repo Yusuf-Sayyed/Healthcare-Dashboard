@@ -1,8 +1,8 @@
 .calendarContainer {
-    background: #F0F8FF; /* White background */
-    padding: 1.5rem; /* Padding inside the container */
-    width: 100%; /* Take full width of parent (right column) */
-    box-sizing: border-box; /* Include padding in width */
+    background: #F0F8FF;
+    padding: 1.5rem;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .header {
@@ -31,7 +31,7 @@
 
 .dayHeaders {
     display: grid;
-    grid-template-columns: repeat(7, 1fr); /* 7 columns for days */
+    grid-template-columns: repeat(7, 1fr);
     text-align: center;
     margin-bottom: 0.5rem;
     font-size: 0.85rem;
@@ -41,8 +41,8 @@
 
 .calendarGrid {
     display: grid;
-    grid-template-columns: repeat(7, 1fr); /* 7 columns for days */
-    gap: 0.5rem 0; /* Row gap, no column gap */
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0.5rem 0;
     text-align: center;
 }
 
@@ -50,7 +50,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* Optional: border or background for cells */
 }
 
 .date {
@@ -63,30 +62,30 @@
 .timeSlots {
     display: flex;
     flex-direction: column;
-    gap: 0.3rem; /* Space between time slots */
+    gap: 0.3rem;
     font-size: 0.8rem;
 }
 
 .timeSlot {
-    padding: 0.3rem 0.5rem; /* Padding around time text */
-    border-radius: 4px; /* Rounded corners for time slots */
+    padding: 0.3rem 0.5rem;
+    border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.2s, color 0.2s;
-    color: #7a8aa0; /* Default color for time slots */
+    color: #7a8aa0;
 }
 
 .timeSlot:hover {
-    background-color: #e8f0fe; /* Hover effect */
+    background-color: #e8f0fe;
     color: #222b45;
 }
 
 .selectedDay .date {
-    color: #030b32; /* Highlight color for selected date */
+    color: #030b32;
 }
 
 .selectedTimeSlot {
-    background-color: #1f349c; /* Background for selected time slot */
-    color: #fff; /* White text for selected time slot */
+    background-color: #1f349c;
+    color: #fff;
 }
 
 .disabledTimeSlot {

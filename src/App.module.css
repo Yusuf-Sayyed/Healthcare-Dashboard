@@ -1,16 +1,16 @@
-/* src/App.module.css */
+
 .appContainer {
-    display: flex; /* Or use CSS Grid: display: grid; grid-template-columns: 220px 1fr; */
-    min-height: 100vh; /* Ensure container takes at least full viewport height */
-    background-color: #f7f9fd; /* Match sidebar background for continuity */
+    display: flex;
+    min-height: 100vh;
+    background-color: #f7f9fd;
   }
 
   .mainContentArea {
-    flex-grow: 1; /* Allow main content to take remaining space if using flex */
-    margin-left: 220px; /* Add left margin to accommodate the fixed sidebar */
-    padding: 0 2rem; /* Add horizontal padding to the main content area */
+    flex-grow: 1;
+    margin-left: 220px;
+    padding: 0 2rem;
     display: flex;
-    flex-direction: column; /* Stack Header and Dashboard content vertically */
+    flex-direction: column;
   }
 
 @media (max-width: 768px) {

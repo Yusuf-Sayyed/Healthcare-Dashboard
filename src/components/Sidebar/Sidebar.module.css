@@ -24,7 +24,7 @@
   }
 }
 
-/* Mobile Toggle Button */
+
 .sidebarToggle {
   display: none;
   position: fixed;
@@ -36,7 +36,7 @@
   cursor: pointer;
 }
 
-/* Overlay for mobile */
+
 .overlay {
   position: fixed;
   top: 0;
@@ -47,7 +47,7 @@
   z-index: 999;
 }
 
-/* Mobile styles */
+
 @media (max-width: 768px) {
   .sidebar {
     transform: translateX(-100%);

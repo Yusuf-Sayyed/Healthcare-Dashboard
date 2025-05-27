@@ -1,11 +1,11 @@
 .cardsContainer {
   display: flex;
-  flex-wrap: wrap; /* allows wrapping on smaller screens */
+  flex-wrap: wrap;
   gap: 16px;
   padding: 20px;
   width: 100%;
   margin-top: 24px;
-  justify-content: center; /* optional: center cards horizontally */
+  justify-content: center;
 }
 
 .healthCard {
@@ -13,12 +13,11 @@
   padding: 16px;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  flex: 1 1 200px; /* allows flexibility in sizing */
+  flex: 1 1 200px;
   max-width: 300px;
   min-width: 160px;
 }
 
-/* Rest of the styles */
 .cardIcon {
   font-size: 24px;
   margin-bottom: 8px;

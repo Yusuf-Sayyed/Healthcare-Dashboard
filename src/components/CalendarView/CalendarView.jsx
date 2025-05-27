@@ -1,12 +1,12 @@
   import React from 'react';
   import styles from './CalendarView.module.css';
-  import { ChevronLeft, ChevronRight } from 'lucide-react'; // Assuming you have Lucide React for icons
+  import { ChevronLeft, ChevronRight } from 'lucide-react';
 
   const CalendarView = () => {
-    // Sample data for days and times
+
     const daysOfWeek = ['Mon', 'Tues', 'Wed', 'Thurs', 'Fri', 'Sat', 'Sun'];
 
-    // Updated data structure to include specific time slots for each date
+
     const calendarData = [
       { date: 25, day: 'Mon', timeSlots: ['10:00', '11:00', '12:00'] },
       { date: 26, day: 'Tues', timeSlots: ['08:00', '09:00', '10:00'] },
@@ -17,9 +17,9 @@
       { date: 31, day: 'Sun', timeSlots: ['09:00', '10:00', '11:00'] },
     ];
 
-    // Placeholder data for highlighting - replace with actual state/logic later
+
     const selectedDate = 26;
-    const selectedTimeSlot = '09:00'; // Example of a specific time slot highlight
+    const selectedTimeSlot = '09:00';
     const disabledDate = (28, 30, 31);
     const disabledTimeSlot = ('11:00', '12:00', '9:00');
 
@@ -52,9 +52,10 @@
                       ${dayData.date === 26 && time === '09:00' ? styles.selectedTimeSlot : ''}
                       ${dayData.date === 28 && time === '11:00' ? styles.disabledTimeSlot : ''}
                       ${dayData.date === 30 && (time === '12:00') ? styles.disabledTimeSlot : ''}
-                      ${dayData.date === 31 && (time === '09:00') ? styles.disabledTimeSlot: ''}                      `}
+                      ${dayData.date === 31 && (time === '09:00') ? styles.disabledTimeSlot: ''}
+                      `}
                   >
-                    {time} {/* Display time or dash */}
+                    {time}
                   </div>
                 ))}
               </div>

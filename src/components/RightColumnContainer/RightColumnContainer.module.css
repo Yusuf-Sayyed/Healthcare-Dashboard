@@ -7,8 +7,8 @@
 
 .specificAppointmentsRow {
     display: flex;
-    flex-direction: row;     /* ⬅ Make them sit horizontally */
-    gap: 10px;               /* ⬅ Space between cards */
+    flex-direction: row;
+    gap: 10px;
     flex-wrap: wrap;
 }
 
@@ -21,14 +21,14 @@
     width: 100%;
     box-sizing: border-box;
     display: flex;
-    flex-direction: column; /* Arrange sections vertically */
-    gap: 1.5rem; /* Space between sections */
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
 .specificAppointmentsRow {
     display: flex;
     gap: 1rem;
-    overflow-x: auto; /* Keep horizontal scroll for these cards if needed */
+    overflow-x: auto;
     padding-bottom: 0.5rem;
 }
 
@@ -37,9 +37,6 @@
     color: #222b45;
     margin-bottom: 1rem;
 }
-/* You might need to add more styles here for specific elements within each section */
-
-/* Removed the media query that hid .specificAppointmentsRow and .upcomingScheduleContainer for 1024px and below */
 
 @media (min-width: 2560px) {
   .rightContainer {
