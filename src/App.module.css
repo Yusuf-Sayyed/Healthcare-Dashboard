@@ -14,8 +14,9 @@
 
 @media (max-width: 768px) {
   .appContainer {
+    overflow-x: hidden;
     width: 100vw;
-    min-width: 0;
+    position: relative;
   }
   .mainContentArea {
     margin-left: 0;

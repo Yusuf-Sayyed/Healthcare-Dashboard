@@ -60,6 +60,12 @@
   .sidebarToggle {
     display: block;
   }
+
+  body, #root {
+    overflow-x: hidden !important;
+    width: 100vw !important;
+    position: relative;
+  }
 }
 .topSection {
   display: flex;
