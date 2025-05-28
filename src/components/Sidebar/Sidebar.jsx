@@ -7,6 +7,7 @@ const Sidebar = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [showToggle, setShowToggle] = useState(true);
 
   useEffect(() => {
     const checkIfMobile = () => {
@@ -19,16 +20,24 @@ const Sidebar = () => {
     return () => window.removeEventListener('resize', checkIfMobile);
   }, []);
 
+  const closeSidebarWithDelay = () => {
+    setSidebarOpen(false);
+    setShowToggle(false);
+    setTimeout(() => {
+      setShowToggle(true);
+    }, 100);
+  };
+
   const handleLinkClick = (idx) => {
     setActiveIndex(idx);
     if (isMobile) {
-      setSidebarOpen(false);
+      closeSidebarWithDelay();
     }
   };
 
   return (
     <>
-      {isMobile && !sidebarOpen && (
+      {isMobile && !sidebarOpen && showToggle && (
         <button
           className={styles.sidebarToggle}
           onClick={() => setSidebarOpen(true)}
@@ -42,7 +51,7 @@ const Sidebar = () => {
         {isMobile && sidebarOpen && (
           <button
             className={styles.sidebarClose}
-            onClick={() => setSidebarOpen(false)}
+            onClick={closeSidebarWithDelay}
             aria-label="Close menu"
           >
             <FiX size={28} />
@@ -77,7 +86,7 @@ const Sidebar = () => {
                 <li
                   key={idx}
                   className={styles.navItem}
-                  onClick={() => isMobile && setSidebarOpen(false)}
+                  onClick={() => isMobile && closeSidebarWithDelay()}
                 >
                   <span className={styles.icon}>{link.icon}</span>
                   <span>{link.label}</span>
@@ -89,7 +98,7 @@ const Sidebar = () => {
 
         <div
           className={styles.settingItem}
-          onClick={() => isMobile && setSidebarOpen(false)}
+          onClick={() => isMobile && closeSidebarWithDelay()}
         >
           <span className={styles.icon}>{settingLink.icon}</span>
           <span>{settingLink.label}</span>
@@ -99,7 +108,7 @@ const Sidebar = () => {
       {isMobile && sidebarOpen && (
         <div
           className={styles.overlay}
-          onClick={() => setSidebarOpen(false)}
+          onClick={closeSidebarWithDelay}
         />
       )}
     </>
